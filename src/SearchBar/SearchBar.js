@@ -7,12 +7,14 @@ class SearchBar extends Component {
     render() {
         return (
             <div className="SearchBar">
-                <div classNanem="SearchBar__heading">
+                <div className="SearchBar__heading">
                     <h1>File Uploader</h1>
                 </div>
                 <div className="SearchBar__controls">
-                    <SearchBar />
-                    <FilterOptions />
+                    <SearchBox searchTerm={this.props.searchTerm}
+                     handleUpdate={this.props.handleUpdate} />
+                    <FilterOptions filterOption={this.props.filterOption}
+                    handleFilterChange={this.props.handleFilterChange} />
                 </div>
             </div>
         )
